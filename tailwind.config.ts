@@ -19,8 +19,8 @@ const config: Config = {
         grayLight: "#54525a",
         grayDark: "#848386",
         pinkDark: "#B520CF",
-        pinkLight: "#FF60B5",
-        purple: "#2D0067"
+        pinkLight: "#ffb1da",
+        purple: "#7100ff  "
       }
     }
   },
