@@ -58,43 +58,45 @@ const TechnologiesCarousel = () => {
   });
 
   return (
-    <section className="bg-backgroundInternal-300 py-12">
+    <section className="bg-backgroundInternal-300 py-12 ">
       <p className="text-center text-sm font-semibold tracking-[0.25em] text-white/50">
         TECHNOLOGIES I WORK WITH
       </p>
-      <Swiper {...settingsSwiper}>
-        {techs &&
-          techs
-            .concat(techs)
-            .concat(techs)
-            .concat(techs)
-            .map((tech, index) => (
-              <SwiperSlide key={index} className="mt-16 cursor-grab">
-                <motion.div
-                  initial={{ opacity: 0, scaleX: 0 }}
-                  whileInView={{ opacity: 1, scaleX: 1 }}
-                  className="flex cursor-pointer select-none flex-col items-center justify-center gap-4  px-4"
-                >
-                  <a
-                    href={tech.href}
-                    target="__blank"
-                    className="relative h-[55px] w-[55px] rounded-md"
+      <div className="m-auto w-[95%]">
+        <Swiper {...settingsSwiper}>
+          {techs &&
+            techs
+              .concat(techs)
+              .concat(techs)
+              .concat(techs)
+              .map((tech, index) => (
+                <SwiperSlide key={index} className="mt-16 cursor-grab">
+                  <motion.div
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
+                    className="flex cursor-pointer select-none flex-col items-center justify-center gap-4  px-4"
                   >
-                    <Image
-                      src={"/" + tech.label + ".png"}
-                      fill
-                      alt={tech.label}
-                      className="rounded-md object-contain"
-                    />
-                  </a>
-                  <span className="font-medium text-white/50 hover:underline">
-                    {" "}
-                    {tech.label[0].toUpperCase() + tech.label.slice(1)}
-                  </span>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-      </Swiper>
+                    <a
+                      href={tech.href}
+                      target="__blank"
+                      className="relative h-[55px] w-[55px] rounded-md"
+                    >
+                      <Image
+                        src={"/" + tech.label + ".png"}
+                        fill
+                        alt={tech.label}
+                        className="rounded-md object-contain"
+                      />
+                    </a>
+                    <span className="font-medium text-white/50 hover:underline">
+                      {" "}
+                      {tech.label[0].toUpperCase() + tech.label.slice(1)}
+                    </span>
+                  </motion.div>
+                </SwiperSlide>
+              ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

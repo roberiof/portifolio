@@ -20,7 +20,8 @@ const Hero = () => {
       <div className="m-auto flex max-w-6xl flex-col gap-12 text-center">
         <h1 className="text-[64px] font-black leading-[72px]">
           <span className="gradient-text">Design partner </span>
-          for early-stage <br /> startups
+          <br />
+          for Growing Startups
         </h1>
         <p className="text-medium m-auto max-w-[750px] text-[24px] font-medium leading-9  text-white/50">
           Ship new app features, get a consistent website, marketing, or any
