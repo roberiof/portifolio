@@ -2,6 +2,7 @@
 
 import Hero from "@Sections/Hero";
 import TechnologiesCarousel from "@Sections/TechnologiesCarousel";
+import Links from "@Sections/Links";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <TechnologiesCarousel />
       <div className="h-screen"></div>
+      <Links />
     </main>
   );
 }
