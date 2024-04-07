@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 import Button from "@components/Button/Button";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const transformedX = useTransform(scrollYProgress, [0, 1], [-150, 150]);
+  const transformedX = useTransform(scrollYProgress, [0, 1], [0, 1000]);
 
   return (
     <section className="m-auto w-11/12 overflow-hidden pb-24 pt-44">
@@ -33,15 +34,21 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="mt-16 flex justify-end gap-8"
+        className="mt-16 flex justify-end gap-4"
         style={{ x: transformedX }}
         transition={{ type: "inertial" }}
         ref={ref}
       >
-        <div className="h-[500px] w-[350px] bg-gray-100">1 </div>
-        <div className="h-[500px] w-[350px] bg-gray-100">2 </div>
-        <div className="h-[500px] w-[350px] bg-gray-100">3 </div>
-        <div className="h-[500px] w-[350px] bg-gray-100">4 </div>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Image
+            key={index}
+            src={`/projects/project-${index}-main.png`}
+            width={450}
+            height={600}
+            alt={"Projetot 1"}
+            className={"rounded-xl "}
+          />
+        ))}
       </motion.div>
     </section>
   );
