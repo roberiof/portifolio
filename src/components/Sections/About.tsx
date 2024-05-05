@@ -34,11 +34,11 @@ const About = () => {
           <div className="max-w-[650px] space-y-4">
             <Reveal>
               <p className={paragraphStyles}>
-                Always dedicated and studious since little kid, at my 13 years
-                old, I had the big opportunity to move from my hometown (Crato -
-                CE), a small country city, to live by myself in an accommodation
-                in a big city to study with a full scholarship in of one the
-                best schools of Brazil:{" "}
+                Always dedicated and studious since I was a little kid, at 13
+                years old, I had the big opportunity to move from my hometown
+                (Crato - CE), a small country city, to live by myself in an
+                accommodation in a big city to study with a full scholarship at
+                one of the best schools in Brazil:{" "}
                 <Link
                   href="https://www.fariasbrito.com.br/#/"
                   className="font-semibold underline"
@@ -49,9 +49,9 @@ const About = () => {
             </Reveal>
             <Reveal>
               <p className={paragraphStyles}>
-                There I own a variety of olympics medals and got in touch with
+                There I earned a variety of Olympic medals and got in touch with
                 the computing world for the first time, which led me, at 17, to
-                enroll at Information Systems bachelor course of{" "}
+                enroll in the Information Systems bachelor&apos;s course at{" "}
                 <Link
                   href="https://portal.cin.ufpe.br/"
                   className="font-semibold underline"
@@ -66,8 +66,8 @@ const About = () => {
             <Reveal>
               <p className={paragraphStyles}>
                 Currently, I&apos;m building professional web solutions, from
-                simple landing pages to big SASS platforms with realtime chats,
-                at{" "}
+                simple landing pages to big SaaS platforms with real-time chats,
+                at
                 <Link
                   href="https://www.linkedin.com/company/atomstudioo/mycompany/"
                   className="font-semibold underline"
