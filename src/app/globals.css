@@ -84,3 +84,14 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #B520CF; 
 }
+
+::selection {
+  background-color: #B520CF; /* Yellow */
+  color: black; /* Text color */
+}
+
+/* For older versions of browsers */
+::-moz-selection {
+  background-color: #B520CF; /* Yellow */
+  color: black; /* Text color */
+}
