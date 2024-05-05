@@ -36,8 +36,8 @@ export const Header = () => {
   };
 
   useEffect(() => {
+    let lastScrollTop = 0;
     function hasScrolled() {
-      let lastScrollTop = 0;
       const currentScroll =
         window.pageYOffset || document.documentElement.scrollTop;
       if (currentScroll > lastScrollTop) {
