@@ -55,7 +55,7 @@ export const Header = () => {
         />
         <div className="relative h-10 w-10 flex-shrink-0 rounded-full">
           <Image
-            src="/profile.png"
+            src="/ai-profile-pic.jpg"
             fill
             alt="Foto de Robério Filho"
             className="cursor-pointer rounded-full object-cover"

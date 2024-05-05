@@ -9,7 +9,7 @@ import Work from "@/components/Sections/Work";
 
 export default function Home() {
   return (
-    <main className="relative m-auto  min-h-screen w-full max-w-[1440px] overflow-x-hidden border-l border-r border-[#15181f] bg-backgroundInternal-100 text-white ">
+    <main className="relative m-auto  min-h-screen w-full max-w-[1400px] overflow-x-hidden border-l border-r border-[#15181f] bg-backgroundInternal-100 text-white ">
       <Hero />
       <TechnologiesCarousel />
       <Work />

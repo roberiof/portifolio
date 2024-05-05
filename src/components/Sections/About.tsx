@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import "../../app/globals.css";
 
 const About = () => {
@@ -18,39 +20,54 @@ const About = () => {
             Behind the screen
           </motion.h1>
         </div>
-        <div className="max-w-[650px] space-y-4">
-          <p className={paragraphStyles}>
-            Hello there! My name is Lovro, and I&apos;m a freelance designer. I
-            work directly with clients to provide high-quality design solutions
-            that help businesses achieve their goals.
-          </p>
-          <p className={paragraphStyles}>
-            I work directly with you on a one-to-one basis. This approach
-            ensures that I can dedicate my full attention to your project,
-            delivering the highest quality design solutions tailored to your
-            needs.
-          </p>
-          <p className={paragraphStyles}>
-            My approach is simple: instead of charging per project or per hour,
-            I offer a flat monthly rate that covers as many design requests as
-            you need.
-          </p>
-          <p className={paragraphStyles}>
-            This way, you can focus on your business without worrying about the
-            cost of design work.
-          </p>
-          <div className="my-4 border-l-2 border-white pl-4">
-            <p className="text-xl font-semibold">
-              My ultimate goal is your success. I’am committed to working with
-              you until you&apos;re completely satisfied.
+        <div className="flex items-center justify-between gap-16 ">
+          <Image
+            src={"/profile.png"}
+            width={250}
+            height={250}
+            className="object- rounded-xl transition-all hover:-rotate-2 hover:scale-110"
+            alt="Foto de perfil"
+          />
+          <div className="max-w-[650px] space-y-4">
+            <p className={paragraphStyles}>
+              Always dedicated and studious since little kid, at my 13 years
+              old, I had the big opportunity to move from my hometown (Crato -
+              CE), a small country city, to live by myself in an accommodation
+              in a big city to study with a full scholarship in of one the best
+              schools of Brazil:{" "}
+              <Link
+                href="https://www.fariasbrito.com.br/#/"
+                className="font-semibold underline"
+              >
+                Farias Brito.
+              </Link>
+            </p>
+            <p className={paragraphStyles}>
+              There I own a variety of olympics medals and got in touch with the
+              computing world for the first time, which led me, at 17, to enroll
+              at Information Systems bachelor course of{" "}
+              <Link
+                href="https://portal.cin.ufpe.br/"
+                className="font-semibold underline"
+              >
+                CIn (Centro de Informática)
+              </Link>
+              , one of the most renowned national computing departments. In the
+              very first semester, I already started working with software
+              development.
+            </p>
+            <p className={paragraphStyles}>
+              Currently, I'm building professional web solutions, from simple
+              landing pages to big SASS platforms with realtime chats, at{" "}
+              <Link
+                href="https://www.linkedin.com/company/atomstudioo/mycompany/"
+                className="font-semibold underline"
+              >
+                Atom Studio
+              </Link>{" "}
+              software house.
             </p>
           </div>
-          <p className={paragraphStyles}>
-            If you&apos;re interested in learning more about my approach and how
-            I can help grow your business,{" "}
-            <span className="underline">let&apos;s schedule a free call</span>.
-            Together, we can take your business to the next level.
-          </p>
         </div>
       </div>
       <motion.div

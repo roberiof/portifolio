@@ -58,7 +58,7 @@ const Work = () => {
               style={{
                 background: `linear-gradient(to top,  ${project.gradientColor}, #000000)`
               }}
-              className="relative flex h-[150px] w-full items-end rounded-[30px] bg-white object-contain sm:h-[625px] md:h-[650px] xl:h-[685px]"
+              className="relative flex h-[150px] w-full items-end rounded-[30px] bg-white object-contain sm:h-[625px] md:h-[650px] xl:h-[668px]"
             >
               <div
                 className={`mainImage-${index} relative z-10 h-[90%] w-full translate-x-12  overflow-hidden rounded-t-xl sm:translate-x-36 lg:translate-x-48`}
