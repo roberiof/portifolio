@@ -1,16 +1,18 @@
 import { ArrowUp } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const UpButton = () => {
   const [isOnTop, setIsOnTop] = useState(false);
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY === 0) {
-      setIsOnTop(true);
-    } else {
-      setIsOnTop(false);
-    }
-  });
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY === 0) {
+        setIsOnTop(true);
+      } else {
+        setIsOnTop(false);
+      }
+    });
+  }, []);
 
   return (
     <button

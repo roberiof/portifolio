@@ -6,12 +6,12 @@ import Link from "next/link";
 
 import { animate, motion, useAnimationControls } from "framer-motion";
 import { linkedInLink, mediumLink } from "@utils/links";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   defaultControlRole,
-  defaultControlName,
   defaultControlLink,
-  navLinksStyle
+  navLinksStyle,
+  defaultControlName
 } from "./constants";
 
 import MobileHeader from "./components/MobileHeader";
@@ -35,22 +35,21 @@ export const Header = () => {
     controlLink.start(defaultControlLink);
   };
 
-  let lastScrollTop = 0;
-
-  function hasScrolled() {
-    const currentScroll =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-      console.log("Usuário rolou para baixo");
-      animate("header", { y: -100 });
-    } else {
-      animate("header", { y: 20 });
-      console.log("Usuário não rolou para baixo");
+  useEffect(() => {
+    function hasScrolled() {
+      let lastScrollTop = 0;
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        animate("header", { y: -100 });
+      } else {
+        animate("header", { y: 20 });
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para lidar com rolagens para cima abruptas
     }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para lidar com rolagens para cima abruptas
-  }
 
-  window.addEventListener("scroll", hasScrolled);
+    window.addEventListener("scroll", hasScrolled);
+  }, []);
 
   return (
     <motion.header
