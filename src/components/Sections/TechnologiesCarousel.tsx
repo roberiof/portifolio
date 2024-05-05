@@ -78,12 +78,13 @@ const TechnologiesCarousel = () => {
                   >
                     <a
                       href={tech.href}
-                      target="__blank"
+                      target="_blank"
                       className="relative h-[40px] w-[40px] rounded-md sm:h-[55px] sm:w-[55px]"
                     >
                       <Image
                         src={"/" + tech.label + ".png"}
                         fill
+                        sizes="(max-width: 640px) 55px, 40vw"
                         alt={tech.label}
                         className="rounded-md object-contain"
                       />

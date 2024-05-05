@@ -73,7 +73,8 @@ const Hero = () => {
             src={`/projects/project-${index}-main.png`}
             width={450}
             height={600}
-            alt={"Projetot 1"}
+            priority
+            alt={`Projeto ${index}`}
             className={"rounded-xl "}
           />
         ))}

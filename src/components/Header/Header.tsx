@@ -74,6 +74,7 @@ export const Header = () => {
           <Image
             src="/ai-profile-pic.jpg"
             fill
+            sizes="40px"
             alt="Foto de Robério Filho"
             className="cursor-pointer rounded-full object-cover"
           />
