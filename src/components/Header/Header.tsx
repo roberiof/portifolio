@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 
-import { motion, useAnimationControls } from "framer-motion";
+import { animate, motion, useAnimationControls } from "framer-motion";
 import { linkedInLink } from "@utils/links";
 import { useRef } from "react";
 import {
@@ -35,11 +35,29 @@ export const Header = () => {
     controlLink.start(defaultControlLink);
   };
 
+  let lastScrollTop = 0;
+
+  function hasScrolled() {
+    const currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+      console.log("Usuário rolou para baixo");
+      animate("header", { y: -100 });
+    } else {
+      animate("header", { y: 20 });
+      console.log("Usuário não rolou para baixo");
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para lidar com rolagens para cima abruptas
+  }
+
+  window.addEventListener("scroll", hasScrolled);
+
   return (
     <motion.header
       animate={{ y: 20 }}
       initial={{ y: "-100%", x: "-50%", left: "50%" }}
-      className="glassmorphism fixed z-20 flex w-11/12 max-w-[550px] justify-between border border-white/10 px-4 py-2 text-white"
+      transition={{ ease: "easeInOut" }}
+      className="header glassmorphism fixed z-20 flex w-11/12 max-w-[550px] justify-between border border-white/10 px-4 py-2 text-white"
     >
       <motion.div
         onHoverStart={startAnimation}
