@@ -65,6 +65,7 @@ const Hero = () => {
         className="mt-16 flex justify-end gap-4"
         initial={{ x: 1000 }}
         style={{ x: transformedX }}
+        transition={{ ease: "easeIn" }}
         ref={ref}
       >
         {Array.from({ length: 5 }).map((_, index) => (
