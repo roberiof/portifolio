@@ -5,7 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 
 import { animate, motion, useAnimationControls } from "framer-motion";
-import { linkedInLink } from "@utils/links";
+import { linkedInLink, mediumLink } from "@utils/links";
 import { useRef } from "react";
 import {
   defaultControlRole,
@@ -110,16 +110,16 @@ export const Header = () => {
 
       {/* WEB HEADER */}
       <nav className="group relative hidden md:flex">
-        <a href="" className={"peer/work" + navLinksStyle}>
+        <a href="#work" className={"peer/work" + navLinksStyle}>
           Work
         </a>
-        <a href="" className={"peer/about " + navLinksStyle}>
+        <a href="#about" className={"peer/about " + navLinksStyle}>
           About
         </a>
         <a
-          href="mediumLink"
+          href={mediumLink}
           target="__blank"
-          className={"peer/blog flex items-center gap-2 " + navLinksStyle}
+          className={"peer/blog flex items-center gap-2" + navLinksStyle}
         >
           <span>Blog</span>
           <span>

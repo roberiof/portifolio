@@ -38,12 +38,14 @@ const Work = () => {
   ];
 
   return (
-    <section className="m-auto w-11/12">
-      <div className="py-16 text-center ">
-        <p className="text-[11px] font-medium tracking-[0.25em] text-white/50">
+    <section className="m-auto w-11/12" id="work">
+      <div className="space-y-4 py-16 text-center">
+        <p className="hidden text-[11px] font-medium tracking-[0.25em] text-white/50 sm:block">
           SMALL PROJECTS THAT SHOW A LITTLE ABOUT MY WORK.
         </p>
-        <h1 className="text-[48px] font-bold">Examples of Development Work</h1>
+        <h1 className="text-4xl font-bold sm:text-[48px]">
+          Examples of Development Work
+        </h1>
       </div>
       <div className="space-y-12">
         {projects.map((project, index) => (
@@ -58,10 +60,10 @@ const Work = () => {
               style={{
                 background: `linear-gradient(to top,  ${project.gradientColor}, #000000)`
               }}
-              className="relative flex h-[150px] w-full items-end rounded-[30px] bg-white object-contain sm:h-[625px] md:h-[650px] xl:h-[668px]"
+              className="relative flex h-[350px] w-full items-end justify-center rounded-[30px] bg-white object-contain md:h-[450px] xl:h-[668px]"
             >
               <div
-                className={`mainImage-${index} relative z-10 h-[90%] w-full translate-x-12  overflow-hidden rounded-t-xl sm:translate-x-36 lg:translate-x-48`}
+                className={`mainImage-${index} relative z-10 h-[90%] w-full overflow-hidden rounded-t-xl  lg:translate-x-36 xl:translate-x-48`}
               >
                 <Image
                   src={`/projects/project-${index}-main.png`}
@@ -71,7 +73,7 @@ const Work = () => {
                 />
               </div>
               <motion.div
-                className="relative h-full w-full -translate-x-12  sm:-translate-x-36 lg:-translate-x-48"
+                className="relative hidden h-full w-full lg:block lg:-translate-x-36  xl:-translate-x-48"
                 initial={{ zIndex: 0, opacity: 0.8, x: -250 }}
                 transition={{ ease: "easeIn" }}
                 // animation to see the guy behind
@@ -91,15 +93,15 @@ const Work = () => {
                 />
               </motion.div>
             </div>
-            <div className="flex justify-between px-2 ">
-              <span className="text-[24px] text-[#c5c7cc] hover:underline">
+            <div className="flex items-center justify-between px-2 ">
+              <span className="text-[#c5c7cc] hover:underline sm:text-[24px]">
                 {project.name}
               </span>
               <div className="flex gap-4">
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80"
+                  className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-sm text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80 sm:text-base"
                 >
                   Github
                 </Link>
@@ -107,7 +109,7 @@ const Work = () => {
                   <Link
                     href={project.demo}
                     target="_blank"
-                    className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80"
+                    className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-sm text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80 sm:text-base"
                   >
                     Demo
                   </Link>

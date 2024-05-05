@@ -7,15 +7,15 @@ import "../../app/globals.css";
 const About = () => {
   const paragraphStyles = " text-[#86858c]";
   return (
-    <section className="relative overflow-hidden pb-40 pt-32">
-      <div className="m-auto flex w-11/12 flex-col items-center justify-center gap-16 ">
+    <section className="relative overflow-hidden pb-40 pt-32" id="about">
+      <div className="m-auto flex w-11/12 flex-col items-center justify-center gap-8 lg:gap-16 ">
         <div className="text-center">
-          <h1 className="text-7xl font-bold">The Developer</h1>
+          <h1 className="text-5xl font-bold lg:text-7xl">The Developer</h1>
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: [0, 0.2], y: 0 }}
             transition={{ delay: 0.2, type: "spring" }}
-            className="text-stroke opacity-20"
+            className="text-stroke text-4xl opacity-20 sm:text-7xl lg:text-[7em]"
           >
             Behind the screen
           </motion.h1>
@@ -25,7 +25,7 @@ const About = () => {
             src={"/profile.png"}
             width={250}
             height={250}
-            className="object- rounded-xl transition-all hover:-rotate-2 hover:scale-110"
+            className="hidden rounded-xl transition-all hover:-rotate-2 hover:scale-110 lg:block"
             alt="Foto de perfil"
           />
           <div className="max-w-[650px] space-y-4">
@@ -57,8 +57,8 @@ const About = () => {
               development.
             </p>
             <p className={paragraphStyles}>
-              Currently, I'm building professional web solutions, from simple
-              landing pages to big SASS platforms with realtime chats, at{" "}
+              Currently, I&apos;m building professional web solutions, from
+              simple landing pages to big SASS platforms with realtime chats, at{" "}
               <Link
                 href="https://www.linkedin.com/company/atomstudioo/mycompany/"
                 className="font-semibold underline"

@@ -39,15 +39,27 @@ const MobileHeader = () => {
           >
             <motion.a
               {...menuItem}
+              href={"#work"}
               className="cursor-pointer font-semibold text-[#dddee5] hover:text-white"
+              onClick={() => setOpen(false)}
             >
               Work
             </motion.a>
             <motion.a
               {...menuItem}
+              href={"#about"}
               className="cursor-pointer font-semibold text-[#dddee5] hover:text-white"
+              onClick={() => setOpen(false)}
             >
               About
+            </motion.a>
+            <motion.a
+              {...menuItem}
+              className="flex cursor-pointer items-center gap-2 font-semibold text-[#dddee5] hover:text-white"
+              href={"#footer"}
+              onClick={() => setOpen(false)}
+            >
+              Links
             </motion.a>
             <motion.a
               {...menuItem}

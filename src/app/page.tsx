@@ -3,9 +3,10 @@
 import Hero from "@Sections/Hero";
 import TechnologiesCarousel from "@Sections/TechnologiesCarousel";
 import Links from "@Sections/Links";
-import About from "@/components/Sections/About";
-import Footer from "@/components/Sections/Footer";
-import Work from "@/components/Sections/Work";
+import About from "@Sections/About";
+import Footer from "@Sections/Footer";
+import Work from "@Sections/Work";
+import UpButton from "@Sections/UpButton";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Footer />
       <Links />
+      <UpButton />
     </main>
   );
 }

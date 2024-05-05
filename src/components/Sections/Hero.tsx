@@ -21,12 +21,12 @@ const Hero = () => {
       ></motion.div>
 
       <div className="m-auto flex max-w-6xl flex-col gap-12 text-center">
-        <h1 className="text-[64px] font-black leading-[72px]">
+        <h1 className="text-[36px] font-black leading-tight sm:text-[64px] sm:leading-[72px]">
           Hi, I&apos;m Robério
           <br />
           <span className="gradient-text"> Software Developer </span>
         </h1>
-        <p className="text-medium m-auto max-w-[750px] text-[24px] font-medium leading-9  text-white/50">
+        <p className="text-medium m-auto -mt-8 max-w-[750px] text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
           With nearly 3 years of experience especialized on web software,
           I&apos;ve been developing beautiful and functional solutions for my
           clients.

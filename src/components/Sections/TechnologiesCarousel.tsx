@@ -74,12 +74,12 @@ const TechnologiesCarousel = () => {
                   <motion.div
                     initial={{ opacity: 0, scaleX: 0 }}
                     whileInView={{ opacity: 1, scaleX: 1 }}
-                    className="flex cursor-pointer select-none flex-col items-center justify-center gap-4  px-4"
+                    className="flex cursor-pointer select-none flex-col items-center justify-center gap-4 px-4"
                   >
                     <a
                       href={tech.href}
                       target="__blank"
-                      className="relative h-[55px] w-[55px] rounded-md"
+                      className="relative h-[40px] w-[40px] rounded-md sm:h-[55px] sm:w-[55px]"
                     >
                       <Image
                         src={"/" + tech.label + ".png"}
@@ -88,7 +88,7 @@ const TechnologiesCarousel = () => {
                         className="rounded-md object-contain"
                       />
                     </a>
-                    <span className="font-medium text-white/50 hover:underline">
+                    <span className="text-sm font-medium text-white/50 hover:underline sm:text-base">
                       {" "}
                       {tech.label[0].toUpperCase() + tech.label.slice(1)}
                     </span>

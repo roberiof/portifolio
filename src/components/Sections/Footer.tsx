@@ -14,15 +14,18 @@ const Footer = () => {
   ];
 
   return (
-    <div className="m-auto flex w-11/12 items-center justify-between py-8 text-sm text-[#706f75]">
+    <div
+      className="m-auto flex w-11/12 flex-col items-center justify-between gap-y-4 py-8 text-sm text-[#706f75] sm:flex-row"
+      id="footer"
+    >
       <p>© {currentYear} Robério Filho. All rights reserved.</p>
-      <div className="space-x-4">
+      <div className="space-x-6">
         {linksData.map((data) => (
           <a
             key={data.href}
             href={data.href}
             target="_blank"
-            className="underline transition-all hover:text-white/90"
+            className="text-lg underline transition-all hover:text-white/90"
           >
             {data.label}
           </a>
