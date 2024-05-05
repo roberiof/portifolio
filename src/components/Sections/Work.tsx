@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, animate } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const projects = [
     {
       name: "DevBlog",
-      github: "https://dev-blog-ruddy-eta.vercel.app/",
-      demo: "https://github.com/roberiof/dev-blog",
+      github: "https://github.com/roberiof/dev-blog",
+      demo: "https://dev-blog-ruddy-eta.vercel.app/",
       gradientColor: "#6e45e2"
     },
     {
       name: "MDD digital",
-      github: "https://mdd-digital.vercel.app/",
-      demo: "https://github.com/roberiof/mdd-digital",
+      github: "https://github.com/roberiof/mdd-digital",
+      demo: "https://mdd-digital.vercel.app/",
       gradientColor: "#0464FF"
     },
     {
@@ -26,7 +26,7 @@ const Work = () => {
     {
       name: "Spicers",
       github: "https://github.com/roberiof/spicers-frontend",
-      demo: "https://spicers-frontend.vercel.app",
+      demo: "",
       gradientColor: "#ff0c38"
     },
     {
@@ -41,7 +41,7 @@ const Work = () => {
     <section className="m-auto w-11/12">
       <div className="py-16 text-center ">
         <p className="text-[11px] font-medium tracking-[0.25em] text-white/50">
-          TAKE A LOOK AT SOME OF THE LATEST WORKS.
+          SMALL PROJECTS THAT SHOW A LITTLE ABOUT MY WORK.
         </p>
         <h1 className="text-[48px] font-bold">Examples of Development Work</h1>
       </div>
@@ -52,6 +52,7 @@ const Work = () => {
             className="space-y-4"
             initial={{ y: "50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
           >
             <div
               style={{
@@ -72,14 +73,15 @@ const Work = () => {
               <motion.div
                 className="relative h-full w-full -translate-x-12  sm:-translate-x-36 lg:-translate-x-48"
                 initial={{ zIndex: 0, opacity: 0.8, x: -250 }}
-                whileHover={{ zIndex: 20, opacity: 1, x: -240 }}
                 transition={{ ease: "easeIn" }}
-                onMouseEnter={() =>
-                  animate(`.mainImage-${index}`, { opacity: 0.8 })
-                }
-                onMouseLeave={() =>
-                  animate(`.mainImage-${index}`, { opacity: 1 })
-                }
+                // animation to see the guy behind
+                // whileHover={{ zIndex: 20, opacity: 1, x: -240 }}
+                // onMouseEnter={() =>
+                //   animate(`.mainImage-${index}`, { opacity: 0.8 })
+                // }
+                // onMouseLeave={() =>
+                //   animate(`.mainImage-${index}`, { opacity: 1 })
+                // }
               >
                 <Image
                   src={`/projects/project-${index}-secondary.png`}
@@ -96,16 +98,20 @@ const Work = () => {
               <div className="flex gap-4">
                 <Link
                   href={project.github}
-                  className="cursor-pointer rounded-full border-2 border-white/10 p-1 px-4 text-[#606163] transition-all hover:border-white/50 hover:text-white/50"
+                  target="_blank"
+                  className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80"
                 >
                   Github
                 </Link>
-                <Link
-                  href={project.demo}
-                  className="cursor-pointer rounded-full border-2 border-white/10 p-1 px-4 text-[#606163] transition-all hover:border-white/50 hover:text-white/50"
-                >
-                  Demo
-                </Link>
+                {project.demo && (
+                  <Link
+                    href={project.demo}
+                    target="_blank"
+                    className="cursor-pointer rounded-full border-2 border-white/50 p-1 px-4 text-white/50 transition-all hover:scale-110 hover:border-white/80 hover:text-white/80"
+                  >
+                    Demo
+                  </Link>
+                )}
               </div>
             </div>
           </motion.div>

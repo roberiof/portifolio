@@ -36,7 +36,6 @@ const Hero = () => {
       <motion.div
         className="mt-16 flex justify-end gap-4"
         style={{ x: transformedX }}
-        transition={{ type: "inertial" }}
         ref={ref}
       >
         {Array.from({ length: 5 }).map((_, index) => (

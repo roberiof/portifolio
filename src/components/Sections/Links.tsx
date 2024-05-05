@@ -11,13 +11,13 @@ const Links = () => {
 
   return (
     <div className="fixed bottom-0 left-5 hidden flex-col items-center gap-4 lg:flex">
-      <Link href={githubLink}>
+      <Link href={githubLink} target="_blank">
         <Github size={24} className={iconsStyle} />
       </Link>
-      <Link href={linkedInLink}>
+      <Link href={linkedInLink} target="_blank">
         <Linkedin size={24} className={iconsStyle} />
       </Link>
-      <Link href={zapLink}>
+      <Link href={zapLink} target="_blank">
         <FaWhatsapp size={24} className={iconsStyle} />
       </Link>
       <span className="mt-2 h-[250px] w-[1px] bg-white"></span>
