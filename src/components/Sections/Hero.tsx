@@ -5,11 +5,12 @@ import Link from "next/link";
 
 import Button from "@components/Button/Button";
 import { linkedInLink } from "@/utils/links";
+import Reveal from "../Reveal/Reveal";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const transformedX = useTransform(scrollYProgress, [0, 1], [0, 1000]);
+  const transformedX = useTransform(scrollYProgress, [0, 1], [1000, 0]);
 
   return (
     <section className="m-auto w-11/12 overflow-hidden pb-24 pt-44">
@@ -21,16 +22,24 @@ const Hero = () => {
       ></motion.div>
 
       <div className="m-auto flex max-w-6xl flex-col gap-12 text-center">
-        <h1 className="text-[36px] font-black leading-tight sm:text-[64px] sm:leading-[72px]">
-          Hi, I&apos;m Robério
-          <br />
-          <span className="gradient-text"> Software Developer </span>
+        <h1 className="-gap-2 flex w-full flex-col items-center justify-center text-[36px] font-black sm:text-[64px] ">
+          <Reveal>
+            <span className="w-fit">Hi, I&apos;m Robério</span>
+          </Reveal>
+          <Reveal>
+            <span className="gradient-text"> Software Developer </span>
+          </Reveal>
         </h1>
-        <p className="text-medium m-auto -mt-8 max-w-[750px] text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
-          With nearly 3 years of experience especialized on web software,
-          I&apos;ve been developing beautiful and functional solutions for my
-          clients.
-        </p>
+        <span className="text-medium m-auto -mt-8 max-w-[750px] text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
+          <Reveal>
+            <span>
+              With nearly 3 years of experience especialized on web software,
+              I&apos;ve been developing beautiful and functional solutions for
+              my clients.
+            </span>
+          </Reveal>
+        </span>
+
         {/* <div className="flex items-center justify-center gap-8">
           <div className="flex gap-2 font-semibold">
             <Image src="/check-portifolio.svg" width={20} height={20} alt="Icons"/>
@@ -54,6 +63,7 @@ const Hero = () => {
 
       <motion.div
         className="mt-16 flex justify-end gap-4"
+        initial={{ x: 1000 }}
         style={{ x: transformedX }}
         ref={ref}
       >

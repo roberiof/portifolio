@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Reveal from "../Reveal/Reveal";
 
 const Work = () => {
   const projects = [
@@ -39,13 +40,15 @@ const Work = () => {
 
   return (
     <section className="m-auto w-11/12" id="work">
-      <div className="space-y-4 py-16 text-center">
+      <div className="flex flex-col items-center justify-center space-y-4 py-16 text-center ">
         <p className="hidden text-[11px] font-medium tracking-[0.25em] text-white/50 sm:block">
           SMALL PROJECTS THAT SHOW A LITTLE ABOUT MY WORK.
         </p>
-        <h1 className="text-4xl font-bold sm:text-[48px]">
-          Examples of Development Work
-        </h1>
+        <Reveal>
+          <span className="text-4xl font-bold sm:text-[48px]">
+            Examples of Development Work
+          </span>
+        </Reveal>
       </div>
       <div className="space-y-12">
         {projects.map((project, index) => (
