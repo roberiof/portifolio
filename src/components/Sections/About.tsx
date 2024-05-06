@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <div className="flex items-center justify-between gap-16 ">
           <Image
-            src={"/profile.png"}
+            src={"/profile-pic.png"}
             width={250}
             height={250}
             className="hidden rounded-xl transition-all hover:-rotate-2 hover:scale-110 lg:block"
@@ -42,6 +42,7 @@ const About = () => {
                 <Link
                   href="https://www.fariasbrito.com.br/#/"
                   className="font-semibold underline"
+                  target="_blank"
                 >
                   Farias Brito.
                 </Link>
@@ -55,6 +56,7 @@ const About = () => {
                 <Link
                   href="https://portal.cin.ufpe.br/"
                   className="font-semibold underline"
+                  target="_blank"
                 >
                   CIn (Centro de Informática)
                 </Link>
