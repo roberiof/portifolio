@@ -23,7 +23,7 @@ const TechnologiesCarousel = () => {
 
   const techs = [
     { label: "react", href: "https://reactjs.org/" },
-    { label: "typeScript", href: "https://www.typescriptlang.org/" },
+    { label: "typescript", href: "https://www.typescriptlang.org/" },
     { label: "nextJS", href: "https://nextjs.org/" },
     { label: "tailwindCSS", href: "https://tailwindcss.com/" },
     { label: "stripe", href: "https://stripe.com/docs" },
