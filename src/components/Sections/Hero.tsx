@@ -68,7 +68,7 @@ const Hero = () => {
         transition={{ ease: "easeIn" }}
         ref={ref}
       >
-        {Array.from({ length: 5 }).map((_, index) => (
+        {[1, 2, 3, 4].map((_, index) => (
           <Image
             key={index}
             src={`/projects/project-${index}-main.png`}
