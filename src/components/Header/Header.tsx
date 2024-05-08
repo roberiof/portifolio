@@ -55,7 +55,6 @@ export const Header = () => {
     <motion.header
       animate={{ y: 20 }}
       initial={{ y: "-100%", x: "-50%", left: "50%" }}
-      transition={{ ease: "easeInOut" }}
       className="header glassmorphism fixed z-20 flex w-11/12 max-w-[550px] justify-between border border-white/10 px-4 py-2 text-white"
     >
       <motion.div
