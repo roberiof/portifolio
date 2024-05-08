@@ -9,7 +9,7 @@ const About = () => {
   const paragraphStyles = " text-[#86858c]";
   return (
     <section
-      className="relative overflow-hidden pb-32 pt-32 min-[600px]:pb-40"
+      className="relative mx-4 overflow-hidden pb-20 pt-32 min-[600px]:pb-40"
       id="about"
     >
       <div className="m-auto flex w-11/12 flex-col items-center justify-center gap-8 lg:gap-16 ">
@@ -26,7 +26,7 @@ const About = () => {
             Behind the screen
           </motion.h1>
         </div>
-        <div className="flex items-center justify-between gap-16 ">
+        <div className="flex items-center justify-between gap-16 text-center sm:text-start ">
           <Image
             src={"/profile-pic.png"}
             width={250}
