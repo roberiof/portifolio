@@ -84,7 +84,7 @@ const TechnologiesCarousel = () => {
                       <Image
                         src={"/" + tech.label + ".png"}
                         fill
-                        sizes="(max-width: 640px) 55px, 40vw"
+                        sizes="(max-width: 640px) 55px, 40px"
                         alt={tech.label}
                         className="rounded-md object-contain"
                       />

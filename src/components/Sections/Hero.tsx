@@ -68,13 +68,13 @@ const Hero = () => {
         transition={{ ease: "easeIn" }}
         ref={ref}
       >
-        {[1, 2, 3, 4].map((_, index) => (
+        {[1, 2, 3, 4].map((index) => (
           <Image
             key={index}
             src={`/projects/project-${index}-main.png`}
             width={450}
             height={600}
-            priority
+            priority={index === 3 || index === 4}
             alt={`Projeto ${index}`}
             className={"rounded-xl "}
           />
