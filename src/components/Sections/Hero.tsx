@@ -33,9 +33,9 @@ const Hero = () => {
         <span className="text-medium m-auto -mt-8 max-w-[750px] text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
           <Reveal>
             <span>
-              With nearly 3 years of experience especialized on web software,
-              I&apos;ve been developing beautiful and functional solutions for
-              my clients.
+              With nearly 1 year of work experience especialized on web
+              software, I&apos;ve been developing beautiful and functional
+              solutions for my clients.
             </span>
           </Reveal>
         </span>
@@ -74,7 +74,7 @@ const Hero = () => {
             src={`/projects/project-${index}-main.png`}
             width={450}
             height={600}
-            // priority={index === 3 || index === 4}
+            priority={index === 3 || index === 4}
             alt={`Projeto ${index}`}
             className={"rounded-xl "}
           />

@@ -22,24 +22,10 @@ html { scroll-behavior: smooth; }
   border-radius: 100%;
   position: absolute;
 }
-.bottom-effect {
-  width: 100%;
-  height: 180px;
-  bottom: -243px;
-  left: 1/2;
-  transform: translateY(-50%);
-  z-index: 1;
-  mix-blend-mode: normal;
-  filter: contrast(210%) blur(40px);
-  background-image: linear-gradient(270deg, #f971ba, #5500be);
-  border-radius: 100%;
-  position: absolute;
-}
+
+.bottom-effect,
 .top-effect {
   width: 100%;
-  height: 200px;
-  top: -153px;
-  left: 0;
   z-index: 1;
   mix-blend-mode: normal;
   filter: contrast(210%) blur(40px);
@@ -48,6 +34,28 @@ html { scroll-behavior: smooth; }
   position: absolute;
 }
 
+@media (min-width: 600px) {
+  .bottom-effect {
+    height: 180px;
+    bottom: -243px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .top-effect {
+    height: 200px;
+    top: -153px;
+    left: 0; /* Mantido à esquerda */
+  }
+}
+
+/* Estilos para telas menores (por exemplo, dispositivos móveis) */
+@media (max-width: 600px) {
+  .bottom-effect,
+  .top-effect {
+    display: none; /* Oculta os elementos em telas menores */
+  }
+}
 .gradient-text{ 
   text-shadow: none;
   -webkit-text-fill-color: transparent;

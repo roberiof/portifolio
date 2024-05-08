@@ -8,7 +8,10 @@ import Reveal from "../Reveal/Reveal";
 const About = () => {
   const paragraphStyles = " text-[#86858c]";
   return (
-    <section className="relative overflow-hidden pb-40 pt-32" id="about">
+    <section
+      className="relative overflow-hidden pb-32 pt-32 min-[600px]:pb-40"
+      id="about"
+    >
       <div className="m-auto flex w-11/12 flex-col items-center justify-center gap-8 lg:gap-16 ">
         <div className="flex flex-col items-center justify-center text-center">
           <Reveal>
