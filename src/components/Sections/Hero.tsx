@@ -10,7 +10,7 @@ import Reveal from "../Reveal/Reveal";
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const transformedX = useTransform(scrollYProgress, [0, 1], [500, 0]);
+  const transformedX = useTransform(scrollYProgress, [0, 1], [120, 0]);
 
   return (
     <section className="m-auto w-11/12 overflow-hidden pb-24 pt-44">
@@ -62,7 +62,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="mt-16 flex justify-end gap-4"
+        className="mt-16 hidden justify-end gap-4 sm:flex"
         initial={{ x: 1000 }}
         style={{ x: transformedX }}
         transition={{ ease: "easeIn" }}
