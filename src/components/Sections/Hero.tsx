@@ -74,7 +74,7 @@ const Hero = () => {
             src={`/projects/project-${index}-main.png`}
             width={450}
             height={600}
-            priority={index === 3 || index === 4}
+            // priority={index === 3 || index === 4}
             alt={`Projeto ${index}`}
             className={"rounded-xl "}
           />
