@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="gradient-text"> Software Developer </span>
           </Reveal>
         </h1>
-        <span className="text-medium m-auto -mt-8 max-w-[750px] text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
+        <span className=" m-auto -mt-8 flex max-w-[750px] flex-col items-center text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
           <Reveal>
             <span>
               With nearly 1 year of work experience especialized on web
@@ -40,20 +40,35 @@ const Hero = () => {
           </Reveal>
         </span>
 
-        {/* <div className="flex items-center justify-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
           <div className="flex gap-2 font-semibold">
-            <Image src="/check-portifolio.svg" width={20} height={20} alt="Icons"/>
+            <Image
+              src="/check-portifolio.svg"
+              width={20}
+              height={20}
+              alt="Icons"
+            />
             <span>Performance</span>
           </div>
           <div className="flex gap-2 font-semibold">
-            <Image src="/check-portifolio.svg" width={20} height={20} alt="Icons"/>
+            <Image
+              src="/check-portifolio.svg"
+              width={20}
+              height={20}
+              alt="Icons"
+            />
             <span>Animations</span>
           </div>
           <div className="flex gap-2 font-semibold">
-            <Image src="/check-portifolio.svg" width={20} height={20} alt="Icons"/>
+            <Image
+              src="/check-portifolio.svg"
+              width={20}
+              height={20}
+              alt="Icons"
+            />
             <span>Code Quality</span>
           </div>
-        </div> */}
+        </div>
         <Button className="m-auto mt-4" onClick={() => null}>
           <Link href={linkedInLink} target="_blank">
             Get in touch
