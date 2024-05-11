@@ -33,9 +33,8 @@ const Hero = () => {
         <span className=" m-auto -mt-8 flex max-w-[750px] flex-col items-center text-base font-medium text-white/50  sm:text-[24px] sm:leading-9">
           <Reveal>
             <span>
-              With nearly 1 year of work experience especialized on web
-              software, I&apos;ve been developing beautiful and functional
-              solutions for my clients.
+              With a focus on web software development, I&apos;ve been crafting
+              beautiful and functional solutions for my clients.
             </span>
           </Reveal>
         </span>

@@ -29,8 +29,8 @@ const About = () => {
         <div className="flex items-center justify-between gap-16 text-center sm:text-start ">
           <Image
             src={"/profile-pic.png"}
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             className="hidden rounded-xl transition-all hover:-rotate-2 hover:scale-110 lg:block"
             alt="Foto de perfil"
           />
