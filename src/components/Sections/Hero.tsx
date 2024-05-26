@@ -10,7 +10,7 @@ import Reveal from "../Reveal/Reveal";
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const transformedX = useTransform(scrollYProgress, [0, 1], [120, 0]);
+  const transformedX = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
     <section className="m-auto w-11/12 overflow-hidden pb-24 pt-44">
