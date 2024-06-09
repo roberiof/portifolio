@@ -77,6 +77,7 @@ const About = () => {
                   href="https://www.linkedin.com/company/atomstudioo/mycompany/"
                   className="font-semibold underline"
                 >
+                  {" "}
                   Atom Studio
                 </Link>{" "}
                 software house.
