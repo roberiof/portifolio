@@ -35,21 +35,21 @@ export const Header = () => {
     controlLink.start(defaultControlLink);
   };
 
-  useEffect(() => {
-    let lastScrollTop = 0;
-    function hasScrolled() {
-      const currentScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
-        animate("header", { y: -100 });
-      } else {
-        animate("header", { y: 20 });
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para lidar com rolagens para cima abruptas
-    }
+  // useEffect(() => {
+  //   let lastScrollTop = 0;
+  //   function hasScrolled() {
+  //     const currentScroll =
+  //       window.pageYOffset || document.documentElement.scrollTop;
+  //     if (currentScroll > lastScrollTop) {
+  //       animate("header", { y: -100 });
+  //     } else {
+  //       animate("header", { y: 20 });
+  //     }
+  //     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para lidar com rolagens para cima abruptas
+  //   }
 
-    window.addEventListener("scroll", hasScrolled);
-  }, []);
+  //   window.addEventListener("scroll", hasScrolled);
+  // }, []);
 
   return (
     <motion.header
