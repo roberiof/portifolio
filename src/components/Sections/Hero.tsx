@@ -9,7 +9,10 @@ import Reveal from "../Reveal/Reveal";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end start", "start end"]
+  });
   const transformedX = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
