@@ -31,6 +31,8 @@ const About = () => {
             src={"/profile-pic.jpg"}
             width={200}
             height={200}
+            priority
+            unoptimized
             className="hidden rounded-xl transition-all hover:-rotate-2 hover:scale-110 lg:block"
             alt="Foto de perfil"
           />
