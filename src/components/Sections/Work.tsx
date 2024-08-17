@@ -63,7 +63,7 @@ const Work = () => {
             className="space-y-4"
             initial={{ y: "50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewpAort={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
             <div
