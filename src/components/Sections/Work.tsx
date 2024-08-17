@@ -35,6 +35,12 @@ const Work = () => {
       github: "https://github.com/roberiof/car_showcase",
       demo: "",
       gradientColor: "#446DFF"
+    },
+    {
+      name: "Syncrely",
+      github: "https://github.com/roberiof/syncrely",
+      demo: "https://syncrely.vercel.app/",
+      gradientColor: "#7B59F8"
     }
   ];
 
@@ -57,7 +63,7 @@ const Work = () => {
             className="space-y-4"
             initial={{ y: "50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            viewpAort={{ once: true }}
             transition={{ duration: 0.5 }}
           >
             <div
