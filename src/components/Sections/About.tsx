@@ -28,7 +28,7 @@ const About = () => {
         </div>
         <div className="flex items-center justify-between gap-16 text-center sm:text-start ">
           <Image
-            src={"/profile-pic.png"}
+            src={"/profile-pic.jpg"}
             width={200}
             height={200}
             className="hidden rounded-xl transition-all hover:-rotate-2 hover:scale-110 lg:block"

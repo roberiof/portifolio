@@ -71,7 +71,7 @@ export const Header = () => {
         />
         <div className="relative h-10 w-10 flex-shrink-0 rounded-full">
           <Image
-            src="/ai-profile-pic.jpg"
+            src="/profile-pic.jpg"
             fill
             sizes="40px"
             alt="Foto de Robério Filho"
