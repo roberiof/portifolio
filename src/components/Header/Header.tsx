@@ -69,16 +69,15 @@ export const Header = () => {
           ref={link}
           className="hidden"
         />
-        <div className="relative h-10 w-10 flex-shrink-0 rounded-full">
+        {/* <div className="relative h-15 w-15 flex-shrink-0 rounded-full object-cover">
           <Image
             src="/profile-pic.jpg"
             fill
-            unoptimized
             sizes="40px"
             alt="Foto de Robério Filho"
             className="cursor-pointer rounded-full object-cover"
           />
-        </div>
+        </div> */}
         <motion.span
           transition={{ type: "spring" }}
           initial={defaultControlName}
