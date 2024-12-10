@@ -35,9 +35,9 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Robério Filho - Frontend engineer",
+  title: "Robério Filho - Full Stack Engineer",
   description:
-    "A frontend engineer that generates value through precised-coded solutions"
+    "A Full Stack Engineer that generates value through precised-coded solutions"
 };
 
 export default function RootLayout({

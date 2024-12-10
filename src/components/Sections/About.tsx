@@ -76,11 +76,12 @@ const About = () => {
                 simple landing pages to big SaaS platforms with real-time chats,
                 at
                 <Link
-                  href="https://www.linkedin.com/company/atomstudioo/mycompany/"
+                  href="https://www.souv.tech/"
+                  target="_blank"
                   className="font-semibold underline"
                 >
                   {" "}
-                  Atom Studio
+                  Souv Tech
                 </Link>{" "}
                 software house.
               </p>
